@@ -1,0 +1,33 @@
+{% extends "main/base.html" %}
+
+{% block content %}
+<div class="container flex flex-col">
+
+    <div class="flex flex-col mx-auto">
+        <h1 class="text-5xl text-black self-center">Results:<p </h1>
+    </div>
+
+    <section class="flex flex-col items-center mt-5">
+        <p>{{Condition}}</p>
+
+        <ol class="space-y-1 list-decimal text-cyan-800 mt-8 text-2xl xl:w-96">
+            <p class="text-black">You may have :</p>
+            {% for diseas in PresetDiseases %}
+                {% if OtherPresetDiseases %}
+                    {% for dis in OtherPresetDiseases %}
+                        <li>{{dis}} </li>
+                    {% endfor %}
+                {% endif %}
+            <li>{{diseas}}</li>
+            {% endfor %}
+        </ol>
+
+        <ol class="space-y-1 list-decimal text-cyan-800 mt-8 text-2xl xl:w-96">
+            <p class="text-black">Take following measures :</p>
+            {% for caution in PreCautions %}
+            <li>{{caution}}</li>
+            {% endfor %}
+        </ol>
+    </section>
+</div>
+{% endblock content %}
