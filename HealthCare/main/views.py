@@ -26,7 +26,7 @@ def SymptomsSearchView(request):
     if request.method == 'POST':
         form = SymptomForms(request.POST)
         if form.is_valid():
-            request.session['Symptom'] = form.cleaned_data['symptom']
+            request.session['Symptom'] = form.cleaned_data['symptom'].lower()
             return redirect('SymptomsSelectionView')
     else:
         form = SymptomForms()
