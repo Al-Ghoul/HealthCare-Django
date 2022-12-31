@@ -132,3 +132,5 @@ INTERNAL_IPS = [
 ]
 
 NPM_BIN_PATH = 'C:\\Program Files\\nodejs\\npm.cmd'
+
+SESSION_ENGINE = "django.contrib.sessions.backends.cache"
