@@ -1,7 +1,7 @@
 # HealthCare
 ## A Disease Symptoms analyzer writter purely in python.
 
-## All Data were imported from the health-care chatbot, credit go to the rightful owner.
+## All Data were imported from the health-care chatbot, credit goes to the rightful owner.
 ### Repo link --> https://github.com/itachi9604/healthcare-chatbot
 ## Tech
 
