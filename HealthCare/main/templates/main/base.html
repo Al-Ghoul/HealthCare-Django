@@ -3,24 +3,27 @@
 <html lang="en">
 
 <head>
-	<title>Django Tailwind</title>
-	<meta charset="UTF-8">
+	{% if title %}
+	<title>{{ title }} - HealthCare</title>
+	{% else %}
+	<title>HealthCare</title>
+	{% endif %}	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	{% tailwind_css %}
 </head>
 
-<body class="bg-gray-50 font-serif leading-normal tracking-normal">
+<body class="bg-white font-serif leading-normal tracking-normal">
 	<div class="min-h-screen flex flex-col">
 		<div class='bg-gray-500 px-8 flex items-center justify-between py-4 shadow-sm text-white'> MEDICIO </div>
 		<div class='relative flex flex-grow'>
-			<main class='bg-white flex-1 p-6'>
+			<main class='bg-white p-6 flex-col container mx-auto'>
 				{% block content %}{% endblock %}
 			</main>
 		</div>
 
 		<footer>
-			<div class="bg-cyan-600">
+			<div class="bg-blue-600">
 				<div class="max-w-2xl mx-auto text-white py-10">
 					<div class="text-center">
 						<h3 class="text-3xl mb-3"> HealthCare &copy; All Rights Reserved </h3>
