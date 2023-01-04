@@ -25,7 +25,7 @@ Change your directory to the repo, create the virtual env and activate your venv
 ```sh
 cd HealthCare-Django
 py -m venv YOUR_VENV_NAME
-venv\Srcripts\activate
+YOUR_VENV_NAME\Srcripts\activate
 ```
 
 Install the dependencies and start the server.
